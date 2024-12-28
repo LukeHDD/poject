@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freedom</title>
+    <link rel="stylesheet" href="../CSS/styleremeras.css">
+    <script src="../JS/remeras.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- header con listas y logo con nombre -->
+  <header>
+
+    <div class="logohead">
+        <a href="../index.html"><img src="../Imagenes/img/Diseño sin título (33).png" alt="logohead"></a>
+    </div>
+       <div class="navbar">
+            <ul class="casilleros">
+                <li><a href="../index.html" class="linkanimado" >INICIO</a></li>
+                <li><a href="catalogo.html" class="linkanimado" >CATALOGO</a>
+                <li><a href="../index.html#logo2" class="linkanimado" >NOSOTROS</a></li>
+                <li><a href="#mail" class="linkanimado" >CONTACTOS</a></li>
+            </ul>
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>   
+
+      <div class="drop-bar ">
+        <li><a href="../index.html">INICIO</a></li>
+        <li><a href="catalogo.html">CATALOGO</a></li>
+        <li><a href="../index.html#logo2">NOSOTROS</a></li>
+        <li><a href="#mail">CONTACTOS</a></li>
+      </div>
+</header>
+  
+<script>
+const ToggleBtn = document.querySelector('.bar')
+const ToggleBtnIcon = document.querySelector('.bar i')
+const dropDownMenu = document.querySelector('.drop-bar')
+
+ToggleBtn.onclick = function () {
+  dropDownMenu.classList.toggle('open')
+  const isOpen = dropDownMenu.classList.contains('open')
+  
+  ToggleBtnIcon.classList = isOpen
+  ? 'fa-solid fa-xmark'
+  : 'fa-solid fa-bars'
+}
+
+window.addEventListener('resize', function(){
+   if(window.innerWidth > 900){
+    dropDownMenu.classList.remove('open');
+    ToggleBtnIcon.classList = 'fa-solid fa-bars';
+   }
+});
+</script>
+
+
+  <section id="ropa">
+    <section id="nav-slider">
+      <!-- Imagenes del nav-slider -->
+      <img src="../Imagenes/img/beige/Diseño sin título (26).png" alt="" class="navimage" onclick="currentSlide(1)">
+      <img src="../Imagenes/img/beige/Diseño sin título (27).png" alt="" class="navimage" onclick="currentSlide(2)">
+      <img src="../Imagenes/img/beige/WhatsApp Image 2024-10-24 at 11.28.40 AM.jpeg" alt="" class="navimage" onclick="currentSlide(3)">
+      <img src="../Imagenes/img/beige/WhatsApp Image 2024-10-24 at 11.28.41 AM.jpeg" alt="" class="navimage" onclick="currentSlide(4)">
+      <img src="../Imagenes/ImgRemeras/medidasdetalles.jpeg" alt="" class="navimage" onclick="currentSlide(5)">
+    </section>
+    <section id="slider">
+      <!-- Contenedor del slide -->
+      <div class="slideshow-container">
+        <!-- Imagenes del slider -->
+        <div class="mySlides fade">
+          <img src="../Imagenes/img/beige/Diseño sin título (26).png" >
+        </div>
+        <div class="mySlides fade">
+          <img src="../Imagenes/img/beige/Diseño sin título (27).png" >
+        </div>
+        <div class="mySlides fade">
+          <img src="../Imagenes/img/beige/WhatsApp Image 2024-10-24 at 11.28.40 AM.jpeg" >
+        </div>
+        <div class="mySlides fade">
+          <img src="../Imagenes/img/beige/WhatsApp Image 2024-10-24 at 11.28.41 AM.jpeg" >
+        </div>
+        <div class="mySlides fade">
+          <img src="../Imagenes/ImgRemeras/medidasdetalles.jpeg" >
+        </div>
+        <!-- Botones de siguiente y de atras. -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </section>
+    <section id="detalle-ropa">
+      <h2>Remera Oversize Freedom</h2>
+      <h3>$25.000 ARG</h3>
+      <!-- Formulario de talle -->
+      <form action="" class="talle-contenedor">
+        <!--Contenedor para los inputs del formulario  -->
+        <div class="talle-contenedor">
+          <!-- Labels con input y div dentro para poder seleccionar la opcion. -->
+          <div class="caja-label">
+            <label>
+              <input type="radio" name="talle" value="S">
+              <div class="opcion-talle">S</div>
+            </label>
+          </div>
+          <div class="caja-label">
+            <label>
+              <input type="radio" name="talle" value="M">
+              <div class="opcion-talle">M</div>
+            </label>
+          </div>
+          <div class="caja-label">
+            <label>
+              <input type="radio" name="talle" value="L">
+              <div class="opcion-talle">L</div>
+            </label>
+          </div>
+          <div class="caja-label">
+            <label>
+              <input type="radio" name="talle" value="XL">
+              <div class="opcion-talle">XL</div>
+            </label>
+          </div>
+          <div class="caja-label">
+            <label>
+              <input type="radio" name="talle" value="XXL">
+              <div class="opcion-talle">XXL</div>
+            </label>
+          </div> 
+        </div>
+      </form>
+      <div id="carrito">
+        <a href="formulario.html"><button #id="carrito" >COMPRAR</button></a>
+      </div>
+      <p>¡LEER CON ATENCIÓN ANTES DE COMPRAR!</p>
+      <p>Cuando presione el boton de comprar, se le rediccionara a un formulario donde debe llenar sus datos y colocar nuevamente la remera y talle que eligio en el ultimo casillero
+        por medidas de seguridad, tambien se le dara un alias como metodo de pago para transferencia y se le avisara cuando haya llegado la transferencia, ya que la pagina sigue en pleno desarollo. Si su talle no queda en stock se le comunicara para hacer cambios de modelos o devolución de dinero a pedido del cliente y si su compra esta realizada se le avisara al cliente si su pedido a sido procesado, enviado y entregado, dandole asi tambien información respecto sobre el envio.
+        Cualquier consulta contactarnos.
+        ¡GRACIAS POR SU ATENCIÖN Y COMPRA!
+      </p>
+      <div id="envio">
+        <img src="../Imagenes/ImgRemeras/envío.png" alt="">
+        <p>Envio a todo el pais</p>
+      </div>
+      <div id="devolucion">
+        <img src="../Imagenes/ImgRemeras/devolucion.png" alt="">
+        <p>Devolución antes de los 7 días.</p>
+      </div>
+    </section>
+  </section>
+  <!-- Deatils sobre la ropa -->
+  <div id="detalles">
+    <details>
+      <summary>Descripción</summary>
+      <p>Los productos se elaboran en la provincia de Neuquén, con capacidad de envios a todo el pais, con la idea de darle al cliente la mejor experiencia y son productos con diseños 100% originales de la marca. Cuando presione el boton de comprar, se le rediccionara a un formulario donde debe llenar sus datos y colocar nuevamente la remera y talle que eligio en el ultimo casillero
+        por medidas de seguridad, tambien se le dara un alias como metodo de pago para transferencia y se le avisara cuando haya llegado la transferencia, ya que la pagina sigue en pleno desarollo. Si su talle no queda en stock se le comunicara para hacer cambios de modelos o devolución de dinero a pedido del cliente y si su compra esta realizada se le avisara al cliente si su pedido a sido procesado, enviado y entregado, dandole asi tambien información respecto sobre el envio. Cualquier consulta contactarnos.
+        ¡GRACIAS POR SU ATENCIÖN Y COMPRA!</p>
+    </details>
+    <details>
+      <summary>Calidad</summary>
+      <p>Producto 100% algodon, estampado de alta calidad, elaborados con productos dedicados al estampado y colocación del mismo sobre telas.</p>
+    </details>
+    <details>
+      <summary>Cuidado de la ropa</summary>
+      <p>Lavar y planchar con cuidado, planchado suave por la zona del estampado para evitar cualquier tipo de riesgos.</p>
+    </details>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Seccion de navegación -->
+    <section id="navegacion">
+        <h3>Navegación</h3>
+        <div class="nav">
+            <a class="linkanimado" href="../index.html.html"><p>Inicio</p></a>
+        </div>
+        <div class="nav">
+            <a class="linkanimado" href="catalogo.html"><p>Catalogo</p></a>
+        </div>
+    </section>
+
+    <!-- Seccion de contacto -->
+    <section id="contacto">
+        <h3>Contacto</h3>
+        <div id="tel">
+            <img class="iconos" src="../Imagenes/Img footer/Tel.png" alt="Telefono">
+            <p>TELÉFONO:2994278970</p>
+        </div>
+        <div id="mail">
+            <img class="iconos"  src="../Imagenes/Img footer/mail.png" alt="Mail">
+            <p>freedomtiendaofficial@gmail.com</p>
+        </div>
+        <div id="msg">
+            <a href="https://www.instagram.com/direct/t/17848310676219591"><img class="iconos"  src="../Imagenes/Img footer/msg.png" alt="Mensaje"></a>
+            <a class="linkanimado" href="https://www.instagram.com/direct/t/17848310676219591"><p>Mensaje privado a Instagram.</p></a>
+        </div>
+    </section>
+
+    <!-- Seccion del logo  -->
+    <section id="logo">
+        <h3>Freedom</h3>
+        <img class="logo" src="../Imagenes/img/Logo Freedom Blanco.png" alt="FREEDOM">
+    </section>
+
+    <!-- Seccion de redes -->
+    <section id="redes">
+        <h3>Redes</h3>
+        <div id="IG">
+            <a href="https://www.instagram.com/freedomofficialpage_/"><img class="iconos"  src="../Imagenes/Img footer/IG.png" alt="Instagram"></a>
+            <a class="linkanimado" href="https://www.instagram.com/freedomofficialpage_/"><p>Seguinos en nuestro Instagram</p></a>
+        </div>            
+    </section>
+
+    <!-- Derechos reservados -->
+    <div class="marquee">
+        <marquee direction="left">Copyright 2024 © Freedom oficial page. Todos los derechos reservados</marquee>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* se define el tamaño y comienzo del body del menu */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Montserrat", sans-serif;
+}
+
+
+/* se define el header de la pagina, encontraremos todos las cosas que se colocaron para generarlo */
+
+header{
+    background-color: #262426;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+}
+
+header .logohead{
+ cursor: pointer;
+
+}
+
+header .logohead img{
+    height: 70px;
+    width: auto;
+    animation: 0.8s;
+    transform: translateX(20px);
+    transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+header .logohead img:hover{
+    transform: scale(1.1) translateX(20px);
+}
+
+header .casilleros {
+    display: flex;
+    gap: 2rem;
+    transform: translateX(-20px);
+}
+
+li{
+    list-style: none;
+    padding: 0 20px;
+    transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+header .casilleros li:hover{
+    transform: scale(1.1);
+}
+
+ a{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.bar{
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.drop-bar{
+    z-index: 999;
+}
+
+.drop-bar{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    width: 362px;
+    top: 20px;
+    height: 0;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateX(26px) translateY(100px);
+}
+
+.drop-bar a{
+    color: black;
+    padding: 33px;
+    width: 300px;
+    text-align: center;
+}
+
+.drop-bar.open{
+    height: 355px;
+    display: block;
+}
+
+.drop-bar li{
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ text-decoration: none;
+}
+
+.drop-bar li:hover{
+   background-color: rgb(194, 194, 194);
+  }
+
+@media(max-width: 900px){
+   .navbar .casilleros{
+        display: none;
+    }
+   
+    .navbar .bar{
+        display: block ;
+        margin-right: 20px;
+    }
+
+    .drop-bar{
+        display: block;
+    }
+
+    
+}
+    /* se alinean las remeras, se le da color al texto y fuente, y se sube la altura del menu catalogo */
+    .menucalog{
+        flex-wrap: wrap;
+        position: relative;
+        justify-content: center;
+        display: flex;
+        background: linear-gradient(to right, #efefef, #adadad, #474747);
+        height: auto;
+        width: 100%;
+        text-align: center;
+
+    }
+    
+    
+    .remeras{
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 2px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 30px;
+    }
+    
+
+    .remeras p{
+        font-size: 17px;
+        color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .remeras a{
+        text-decoration: none;
+    }
+
+   /* se acomoda las cajas de las remeras junto a su animación */
+ .remera1{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    border-color: black;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    transition: transform 0.3s;
+    transform: translateY(0px)
+ }
+ 
+ .remera1:hover{
+    transform: translateY(-10px)
+ }
+
+ .remera2{
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    border-color: black;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    transition: transform 0.3s;
+    transform: translateY(0px)
+ }
+ 
+ .remera2:hover{
+    transform: translateY(-10px)
+ }
+
+ .remera3{
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    border-color: black;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    transition: transform 0.3s;
+    transform: translateY(0px)
+ }
+ 
+ .remera3:hover{
+    transform: translateY(-10px)
+ }
+
+.remera4{
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    border-color: black;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    transition: transform 0.3s;
+    transform: translateY(0px)
+ }
+ 
+ .remera4:hover{
+    transform: translateY(-10px)
+ }
+
+ .remera5{
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    border-color: black;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    transition: transform 0.3s;
+    transform: translateY(0px)
+ }
+ 
+ .remera5:hover{
+    transform: translateY(-10px)
+ }
+
+ .remera6{
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    border-color: black;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    transition: transform 0.3s;
+    transform: translateY(0px)
+ }
+ 
+ .remera6:hover{
+    transform: translateY(-10px)
+ }
+
+ .remera7{
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    border-color: black;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    transition: transform 0.3s;
+    transform: translateY(0px)
+ }
+ 
+ .remera7:hover{
+    transform: translateY(-10px)
+ }
+ 
+/* se arma el cuerpo del footer */
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #262426;
+    justify-content: center;
+    color: white;
+    width: 100%;
+}
+
+/* Definiendo el flex, margen y tamaños de las cajas del footer*/
+footer #navegacion, #contacto, #redes, #logo{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 20px;
+    text-align: center;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+/* centrando el logo */
+#logo{
+    justify-content: center;
+    align-items: center;
+}
+
+/* centrando imagenes y texto, definiendo margen, ancho y alto. */
+#tel, #mail, #msg, #IG{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 15px;
+    width: 100%;
+    height: 25px;
+}
+
+/* Animacion de rotacion para las imagenes */
+@keyframes rotacion{
+    0%{transform:rotateY(0)}
+    100%{transform:rotateY(360deg)}
+}
+
+
+/* Escala y sombra cuando el mouse esta encima de las imagenes. */
+#msg img:hover , #IG img:hover{
+    scale: 1.2;
+    filter: drop-shadow(0 0 5px rgb(0, 99, 198));
+}
+
+/* Animación cuando el mouse no esta encima de la imagen. */
+#msg img:not(:hover) , #IG img:not(:hover){
+    animation: rotacion 0.8s;
+}
+
+/* Margen para los titulos. */
+footer h3{
+    margin: 10px;
+
+}
+
+/* Margen para los textos. */
+footer p{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* Margen para los links del nav. */
+.nav{
+    margin: 15px;
+}
+
+/* tamaño y margen de los iconos del footer. */
+footer .iconos {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+
+}
+
+/* tamaño y mmargen del logo. */
+footer .logo{
+    max-width: 150px;
+    max-height: 150px;
+    margin: 5px;
+}
+
+/* Reforma del tamaño de la imagen del mail. */
+#mail img{
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+/* Ancho del marquee. */
+.marquee{
+    width: 100%;   
+}
+
+/* color, posición, pading y display del link */
+footer .linkanimado , header .linkanimado {
+    color: white;
+    text-decoration: none;
+    position: relative; 
+    display: inline-block; /* permite que link actue como un bloque */
+    padding-bottom: 2px;
+}
+
+/* Animación del texto antes de que el mouse se posicione sobre el */
+footer .linkanimado::before , header .linkanimado::before{
+    content: "";
+    position: absolute; /* Se posiciona por encima del .linkanimado */
+    bottom: 0; /* Posiciona el subrayado debajo del texto */
+    left: 50%; /* Hace que el subrayado empiece en el centro */
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease, left 0.3s ease; /* Animación width va a tardar 0.3s en estar al 100% del ancho y left en estar a 0 px */
+}
+
+/* Cambio de ancho y left cuando el mouse esta sobre el link */
+footer .linkanimado:hover::before , header .linkanimado:hover::before{
+    width: 100%;
+    left: 0;
+}
